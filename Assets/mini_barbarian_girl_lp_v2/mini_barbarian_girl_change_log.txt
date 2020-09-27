@@ -1,0 +1,3 @@
+Mini Barbarian Girl Change Log
+
+v2 - added animation clips

@@ -1,0 +1,18 @@
+frame 	000-000: t-pose 
+frame 	002-018: walk		
+frame 	021-035: run		
+frame 	038-061: idle		
+frame 	063-087: chop		
+frame 	089-124: Spin Attack 	
+frame 	126-138: Stab		
+frame 	141-159: Jump		
+frame 	162-181: Uppercut	
+frame 	184-216: Walk w/ Block 	
+frame 	219-231: Hit Right	
+frame 	234-247: Hit Left	
+frame 	250-279: Knockdown	
+frame 	282-312: Double Chop	
+frame 	315-347: 1 Handed Block		
+frame 	351-381: Spawn From Above 
+frame 	384-408: Hit Back	
+frame 	411-433: 2 handed stab	
