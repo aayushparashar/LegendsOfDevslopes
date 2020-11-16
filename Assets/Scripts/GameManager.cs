@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] Text endGameText;
 	[SerializeField] int maxPowerUps = 4;
 	[SerializeField] int finalLevel = 20;
+	[SerializeField] bool isAutoNavigation = false;
 
 	private bool gameOver = false;
 	private int currentLevel;
@@ -73,8 +74,10 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 
 		endGameText.GetComponent<Text> ().enabled = false;
-		StartCoroutine (spawn ());
-		StartCoroutine (powerUpSpawn ());
+		if(!isAutoNavigation)
+			StartCoroutine (spawn ());
+		if (!isAutoNavigation)
+			StartCoroutine (powerUpSpawn ());
 		currentLevel = 1;
 	}
 	

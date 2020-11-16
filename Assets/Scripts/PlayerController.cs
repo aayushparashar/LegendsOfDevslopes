@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		fireTrail = GameObject.FindWithTag ("Fire") as GameObject;
 		fireTrail.SetActive (false);
 		characterController = GetComponent<CharacterController> ();
@@ -49,9 +48,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-
 		if (!GameManager.instance.GameOver) {
-
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
@@ -65,11 +62,9 @@ public class PlayerController : MonoBehaviour {
 				Vector3 targetPosition = new Vector3 (hit.point.x, transform.position.y, hit.point.z);
 				Quaternion rotation = Quaternion.LookRotation (targetPosition - transform.position);
 				transform.rotation = Quaternion.Lerp (transform.rotation, rotation, Time.deltaTime * 10f);
-
 			}
 		}
 	}
-
 	public void BeginAttack() {
 		foreach (var weapon in swordColliders) {
 			weapon.enabled = true;

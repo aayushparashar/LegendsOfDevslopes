@@ -20,7 +20,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemy.IsDead)
+        if (!enemy.IsAlive)
         {
             nav.enabled = false;
         }else 

@@ -18,7 +18,7 @@ public class EnemyHealth : MonoBehaviour {
 	private bool dissapearEnemy = false;
 	private int currentHealth;
 	private ParticleSystem blood;
-
+	private SphereCollider collider;
 	public bool IsAlive {
 		get {return isAlive; }
 	}
@@ -36,6 +36,7 @@ public class EnemyHealth : MonoBehaviour {
 		isAlive = true;
 		currentHealth = startingHealth;
 		blood = GetComponentInChildren<ParticleSystem> ();
+		collider = GetComponent<SphereCollider>();
 	
 	}
 	
@@ -83,6 +84,7 @@ public class EnemyHealth : MonoBehaviour {
 		nav.enabled = false;
 		anim.SetTrigger ("EnemyDie");
 		rigidBody.isKinematic = true;
+		collider.enabled = false;
 		StartCoroutine (removeEnemy());
 
 	}
